@@ -1,3 +1,7 @@
-h3{
-  color: greenyellow;
+.SuccessMessageContainer{
+  padding: 1rem;
+  font-size: small;
+  background-color: greenyellow;
+  color: white;
+  display: inline-block;
 }
