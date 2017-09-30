@@ -1,0 +1,7 @@
+.WarningMessageContainer{
+  padding: 1rem;
+  font-size: small;
+  background-color: orangered;
+  color: white;
+  display: inline-block;
+}
