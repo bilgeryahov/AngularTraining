@@ -3,7 +3,6 @@
        class="form-control"
        [(ngModel)]="serverName"
 />
-
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
@@ -11,8 +10,18 @@
 >
   Add Server
 </button>
-
 <p>{{ serverCreationStatus }}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<label>Server Capacity</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverCapacity"
+/>
+<p>{{ serverCapacity }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="serverCapacity === ''"
+  (click)="onClearServerCapacity()"
+>
+  Clear Server Capacity
+</button>
