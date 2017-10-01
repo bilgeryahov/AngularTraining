@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreated = false;
-  serverCreationStatus = 'No server has been created!';
   serverName = 'TestServer';
   serverCapacity = '';
 
@@ -28,8 +27,15 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreated = true;
-    this.serverCreationStatus = 'Server has been created!';
-    this.serverCreationStatus += ' Server name is ' + this.serverName;
+  }
+
+  /**
+   * The template will call this function.
+   * On modification of server name.
+   */
+
+  onServerNameChange(){
+    this.serverCreated = false;
   }
 
   /**
