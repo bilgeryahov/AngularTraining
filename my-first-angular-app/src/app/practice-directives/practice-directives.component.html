@@ -1,3 +1,16 @@
-<p>
-  practice-directives works!
-</p>
+<div class="container">
+  <button class="btn btn-default"
+          (click)="onDetailsDisplayed()"
+  >
+    Display Details
+  </button>
+  <p *ngIf="detailsDisplayedDivisibleByTwo">
+    Secret Password = tuna
+  </p>
+  <h6 *ngFor="let detailsDisplayClick of detailsDisplayClicks; let i = index"
+      [ngStyle]="{backgroundColor: i >=5 ? 'blue' : 'red'}"
+      [ngClass]="{CoolText: i >=5 }"
+  >
+    {{ detailsDisplayClick }}
+  </h6>
+</div>
