@@ -9,7 +9,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreated = false;
   serverName = 'TestServer';
-  serverCapacity = '';
+  servers = ['TestServer1', 'TestServer2'];
 
   constructor() {
     setTimeout(() => {
@@ -27,6 +27,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 
   /**
@@ -36,14 +37,5 @@ export class ServersComponent implements OnInit {
 
   onServerNameChange(){
     this.serverCreated = false;
-  }
-
-  /**
-   * The template will call this function.
-   * On clicking the clear server capacity button.
-   */
-
-  onClearServerCapacity(){
-    this.serverCapacity = ''
   }
 }
