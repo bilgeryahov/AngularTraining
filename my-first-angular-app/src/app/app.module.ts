@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component'
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { WarningMessageComponent } from './warning-message/warning-message.component';
+import { PracticeDirectivesComponent } from './practice-directives/practice-directives.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WarningMessageComponent } from './warning-message/warning-message.compo
     ServerComponent,
     ServersComponent,
     SuccessMessageComponent,
-    WarningMessageComponent
+    WarningMessageComponent,
+    PracticeDirectivesComponent
   ],
   imports: [
     BrowserModule,
